@@ -5,10 +5,6 @@ function evaluateExpression(expression) {
     const operands = expression.split(/[+\-*/%]/);
     const operators = expression.match(/[+\-*/%]/g);
 
-    // Check if operands and operators are valid
-    if (!operands || !operators || operands.length !== operators.length + 1) {
-        return "Invalid expression";
-    }
 
     // Convert operands to numbers
     const numericOperands = operands.map(parseFloat);
@@ -97,3 +93,15 @@ document.querySelector("#multiplication").addEventListener("click", () => {
     document.querySelector("#display").value = currentValue + "*";
     
 });
+
+document.querySelector("#subtraction").addEventListener("click", () => {
+    const currentValue = document.querySelector("#display").value;
+    document.querySelector("#display").value = currentValue + "-";
+    
+});
+
+
+document.querySelector("division").addEventListener("click",()=>{
+    const currentValue = document.querySelector("#display").value;
+    document.querySelector('#display').value = currentValue + "/";
+})
