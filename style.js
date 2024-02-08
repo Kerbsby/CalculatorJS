@@ -101,7 +101,7 @@ document.querySelector("#subtraction").addEventListener("click", () => {
 });
 
 
-document.querySelector("division").addEventListener("click",()=>{
+document.querySelector("#division").addEventListener("click",()=>{
     const currentValue = document.querySelector("#display").value;
     document.querySelector('#display').value = currentValue + "/";
 })
